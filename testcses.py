@@ -1,0 +1,19 @@
+import unittest
+
+# The code to be tested
+def add(a, b):
+    return a + b
+
+# The test case
+class TestAddFunction(unittest.TestCase):
+    def test_positive_numbers(self):
+        self.assertEqual(add(2, 3), 5)
+
+    def test_negative_numbers(self):
+        self.assertEqual(add(-2, -3), -5)
+
+    def test_zero_and_positive(self):
+        self.assertEqual(add(0, 5), 5)
+
+if __name__ == '__main__':
+    unittest.main()
